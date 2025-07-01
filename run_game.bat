@@ -1,0 +1,6 @@
+@echo off
+echo Installing requirements...
+pip install -r requirements.txt
+echo Starting QuakeSafe Game...
+python quakesafe_game.py
+pause
