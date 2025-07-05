@@ -198,8 +198,8 @@ class QuakeSafeGame:
             try:
                 image_path = f"ชุดเด็ก/{filename}"
                 image = pygame.image.load(image_path)
-                # ปรับขนาดรูปให้ใหญ่ขึ้นสำหรับแสดงตรงกลาง (300x400 พิกเซล)
-                image = pygame.transform.scale(image, (300, 400))
+                # ปรับขนาดรูปให้ใหญ่ขึ้นสำหรับแสดงตรงกลาง (300x400 พิกเซล) - ใช้ smoothscale เพื่อคุณภาพที่ดีกว่า
+                image = pygame.transform.smoothscale(image, (300, 400))
                 self.dress_images.append(image)
                 print(f"โหลดรูปชุดสำเร็จ: {filename}")
             except Exception as e:
